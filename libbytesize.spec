@@ -4,13 +4,12 @@
 #
 Name     : libbytesize
 Version  : 1.2
-Release  : 6
+Release  : 7
 URL      : https://github.com/storaged-project/libbytesize/archive/1.2.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/archive/1.2.tar.gz
 Summary  : Library for working with sizes in bytes
 Group    : Development/Tools
 License  : LGPL-2.1
-Requires: libbytesize-legacypython
 Requires: libbytesize-python3
 Requires: libbytesize-lib
 Requires: libbytesize-python
@@ -36,15 +35,6 @@ Provides: libbytesize-devel
 dev components for the libbytesize package.
 
 
-%package legacypython
-Summary: legacypython components for the libbytesize package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the libbytesize package.
-
-
 %package lib
 Summary: lib components for the libbytesize package.
 Group: Libraries
@@ -56,7 +46,6 @@ lib components for the libbytesize package.
 %package python
 Summary: python components for the libbytesize package.
 Group: Default
-Requires: libbytesize-legacypython
 Requires: libbytesize-python3
 
 %description python
@@ -80,9 +69,9 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512067610
+export SOURCE_DATE_EPOCH=1517697687
 %autogen --disable-static
-make V=1  %{?_smp_mflags}
+make  %{?_smp_mflags}
 
 %check
 export LANG=C
@@ -92,7 +81,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1512067610
+export SOURCE_DATE_EPOCH=1517697687
 rm -rf %{buildroot}
 %make_install
 
@@ -104,10 +93,6 @@ rm -rf %{buildroot}
 /usr/include/bytesize/bs_size.h
 /usr/lib64/libbytesize.so
 /usr/lib64/pkgconfig/bytesize.pc
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files lib
 %defattr(-,root,root,-)
