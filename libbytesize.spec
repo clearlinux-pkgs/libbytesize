@@ -4,7 +4,7 @@
 #
 Name     : libbytesize
 Version  : 1.2
-Release  : 14
+Release  : 15
 URL      : https://github.com/storaged-project/libbytesize/archive/1.2.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/archive/1.2.tar.gz
 Summary  : Library for working with sizes in bytes
