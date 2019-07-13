@@ -4,7 +4,7 @@
 #
 Name     : libbytesize
 Version  : 2.0
-Release  : 19
+Release  : 20
 URL      : https://github.com/storaged-project/libbytesize/releases/download/2.0/libbytesize-2.0.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/releases/download/2.0/libbytesize-2.0.tar.gz
 Summary  : A tiny library providing a C "class" for working with arbitrary big sizes in bytes
