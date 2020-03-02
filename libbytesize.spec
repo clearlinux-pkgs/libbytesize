@@ -4,10 +4,10 @@
 #
 Name     : libbytesize
 Version  : 2.1
-Release  : 23
+Release  : 24
 URL      : https://github.com/storaged-project/libbytesize/releases/download/2.1/libbytesize-2.1.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/releases/download/2.1/libbytesize-2.1.tar.gz
-Summary  : A library for working with sizes in bytes
+Summary  : A tiny library providing a C "class" for working with arbitrary big sizes in bytes
 Group    : Development/Tools
 License  : LGPL-2.1 LGPL-2.1+
 Requires: libbytesize-bin = %{version}-%{release}
@@ -47,6 +47,7 @@ Group: Development
 Requires: libbytesize-lib = %{version}-%{release}
 Requires: libbytesize-bin = %{version}-%{release}
 Provides: libbytesize-devel = %{version}-%{release}
+Requires: libbytesize = %{version}-%{release}
 Requires: libbytesize = %{version}-%{release}
 
 %description dev
@@ -122,7 +123,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1579627970
+export SOURCE_DATE_EPOCH=1583166926
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -135,7 +137,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1579627970
+export SOURCE_DATE_EPOCH=1583166926
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libbytesize
 cp %{_builddir}/libbytesize-2.1/LICENSE %{buildroot}/usr/share/package-licenses/libbytesize/507ba5f4949dedff9e01b4d5b64b365fdc7d4d04
