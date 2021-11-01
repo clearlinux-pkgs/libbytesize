@@ -4,7 +4,7 @@
 #
 Name     : libbytesize
 Version  : 2.6
-Release  : 39
+Release  : 40
 URL      : https://github.com/storaged-project/libbytesize/releases/download/2.6/libbytesize-2.6.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/releases/download/2.6/libbytesize-2.6.tar.gz
 Summary  : A library for working with sizes in bytes
@@ -123,20 +123,20 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1625673952
+export SOURCE_DATE_EPOCH=1635748103
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 %configure --disable-static
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1625673952
+export SOURCE_DATE_EPOCH=1635748103
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libbytesize
 cp %{_builddir}/libbytesize-2.6/LICENSE %{buildroot}/usr/share/package-licenses/libbytesize/507ba5f4949dedff9e01b4d5b64b365fdc7d4d04
