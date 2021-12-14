@@ -4,7 +4,7 @@
 #
 Name     : libbytesize
 Version  : 2.6
-Release  : 40
+Release  : 41
 URL      : https://github.com/storaged-project/libbytesize/releases/download/2.6/libbytesize-2.6.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/releases/download/2.6/libbytesize-2.6.tar.gz
 Summary  : A library for working with sizes in bytes
