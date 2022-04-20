@@ -4,7 +4,7 @@
 #
 Name     : libbytesize
 Version  : 2.6
-Release  : 41
+Release  : 42
 URL      : https://github.com/storaged-project/libbytesize/releases/download/2.6/libbytesize-2.6.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/releases/download/2.6/libbytesize-2.6.tar.gz
 Summary  : A library for working with sizes in bytes
@@ -24,8 +24,8 @@ BuildRequires : libxslt-dev
 BuildRequires : mpfr-dev
 BuildRequires : pkgconfig(glib-2.0)
 BuildRequires : pkgconfig(libpcre2-8)
+BuildRequires : pypi-polib
 BuildRequires : python-pocketlint
-BuildRequires : python-polib
 
 %description
 The libbytesize is a C library that facilitates work with sizes in
@@ -123,7 +123,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635748103
+export SOURCE_DATE_EPOCH=1650499082
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -136,7 +136,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1635748103
+export SOURCE_DATE_EPOCH=1650499082
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libbytesize
 cp %{_builddir}/libbytesize-2.6/LICENSE %{buildroot}/usr/share/package-licenses/libbytesize/507ba5f4949dedff9e01b4d5b64b365fdc7d4d04
