@@ -4,7 +4,7 @@
 #
 Name     : libbytesize
 Version  : 2.7
-Release  : 44
+Release  : 45
 URL      : https://github.com/storaged-project/libbytesize/releases/download/2.7/libbytesize-2.7.tar.gz
 Source0  : https://github.com/storaged-project/libbytesize/releases/download/2.7/libbytesize-2.7.tar.gz
 Summary  : A library for working with sizes in bytes
